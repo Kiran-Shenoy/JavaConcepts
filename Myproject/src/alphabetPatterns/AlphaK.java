@@ -1,6 +1,7 @@
+package alphabetPatterns;
 import java.util.Scanner;
 
-public class AlphaE {
+public class AlphaK {
 
 	public static void main(String[] args) {
 		 Scanner scan = new Scanner(System.in);
@@ -9,7 +10,7 @@ public class AlphaE {
 			
 			for(int i=1;i<=n;i++) {
 				for(int j=1;j<=n;j++) {
-					if(j==1 || i==1 || i==n/2 || i==n)
+					if(j==n/2 || i+j==n+1 && j>n/2 || i==j && j>n/2)
 					{
 						System.out.print("*");
 						}
@@ -18,8 +19,7 @@ public class AlphaE {
 					}
 					}
 				System.out.println();
-			}
-
+			}// TODO
 	}
 
 }
