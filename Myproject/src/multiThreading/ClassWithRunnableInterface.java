@@ -2,14 +2,9 @@ package multiThreading;
 
 import java.util.Scanner;
 
-class Demo5 extends Thread
+class Demo6 implements Runnable
 {
 	public void run()
-	{
-		System.out.print(Thread.currentThread());
-	}
-	
-	public void add()
 	{
 		System.out.println("Addition is start");
 		Scanner scan=new Scanner(System.in);
@@ -21,8 +16,10 @@ class Demo5 extends Thread
 		System.out.println(c);
 		System.out.println("Addition is ended");
 	}
-	
-	public void printA()
+}
+class Demo7 implements Runnable
+{
+	public void run()
 	{
 		System.out.println("printing characters is start");
 		try
@@ -31,7 +28,7 @@ class Demo5 extends Thread
 			for(int i=65;i<=75;i++)
 			{
 				System.out.println((char)i);
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 			}
 		}
 		catch(Exception e)
@@ -40,7 +37,11 @@ class Demo5 extends Thread
 		}
 		System.out.println("printing characters is ended");
 	}
-	public void printN()
+}
+
+class Demo8 implements Runnable
+{
+	public void run()
 	{
 		System.out.println("printing numbers is start");
 		try
@@ -49,7 +50,7 @@ class Demo5 extends Thread
 			for(int i=1;i<=10;i++)
 			{
 				System.out.println(i);
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 			}
 		}
 		catch(Exception e)
@@ -59,21 +60,18 @@ class Demo5 extends Thread
 		System.out.println("printing numbers is ended");
 	}
 }
+public class ClassWithRunnableInterface {
 
-public class ThreadWithSingleClass {
-
-	public static void main(String[] args)  {
+	public static void main(String[] args) {
+		Demo6 d6=new Demo6();
+		Demo7 d7=new Demo7();
+		Demo8 d8=new Demo8();
 		
-		Demo5 d5=new Demo5();
+		Thread th1=new Thread(d6);
+		Thread th2=new Thread(d7);
+		Thread th3=new Thread(d8);
 		
-		Thread th1=new Thread(d5);
-		Thread th2=new Thread(d5);
-		Thread th3=new Thread(d5);
-//		
-//		th1.getName();
-//		th2.getName();
-//		th3.getName();
-//		
+		
 		th1.start();
 		th2.start();
 		th3.start();
