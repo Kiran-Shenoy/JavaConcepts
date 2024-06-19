@@ -6,7 +6,19 @@ class Demo5 extends Thread
 {
 	public void run()
 	{
-		System.out.print(Thread.currentThread());
+		if(Thread.currentThread().getName().equals("ADD"))
+		{
+			add();
+		}
+		else if(Thread.currentThread().getName().equals("PRINTA"))
+		{
+			printA();
+		}
+		else
+		{
+			printN();
+		}
+		
 	}
 	
 	public void add()
@@ -64,19 +76,19 @@ public class ThreadWithSingleClass {
 
 	public static void main(String[] args)  {
 		
-		Demo5 d5=new Demo5();
+		Demo5 d1=new Demo5();
+		Demo5 d2=new Demo5();
+		Demo5 d3=new Demo5();
 		
-		Thread th1=new Thread(d5);
-		Thread th2=new Thread(d5);
-		Thread th3=new Thread(d5);
-//		
-//		th1.getName();
-//		th2.getName();
-//		th3.getName();
-//		
-		th1.start();
-		th2.start();
-		th3.start();
+		//		
+		d1.setName("ADD");
+		d2.setName("PRINTA");
+		d3.setName("PRINTN");
+		
+		
+		d1.start();
+		d2.start();
+		d3.start();
 		
 		
 
