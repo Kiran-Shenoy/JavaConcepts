@@ -16,7 +16,6 @@ public class reverse {
 			char ch=s.charAt(i);
 			 res=res+s.charAt(i);
 			
-			
 		}
 		System.out.println(res);
 		
