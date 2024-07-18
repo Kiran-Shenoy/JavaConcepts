@@ -2,7 +2,7 @@ package strings;
 
 import java.util.Scanner;
 
-public class Rearrage {
+public class Rearrange1 {
 
 	public static void main(String[] args) {
 		Scanner scan=new Scanner(System.in);
@@ -16,7 +16,14 @@ public class Rearrage {
 		{
 			String  res=st[i];
 			String rev=reverse(res);
+			if(i==0 || i==st.length-1)
+			{
 			temp=temp+rev+' ';
+	     	}
+			else
+			{
+			temp=temp+res+' ';
+			}
 		}
 		System.out.println(temp);
 
@@ -30,8 +37,8 @@ public class Rearrage {
 		}
 
 		return t;
-	}
 	
 
+	}
 
 }
