@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Multiples {
 
 	public static void main(String[] args) {
-Scanner scan=new Scanner(System.in);
+    Scanner scan=new Scanner(System.in);
 		
 		int n=scan.nextInt();
 		int x=scan.nextInt();
