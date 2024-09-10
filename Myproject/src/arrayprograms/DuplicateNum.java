@@ -18,7 +18,7 @@ public class DuplicateNum {
         
         int duplicate = -1; // To store the duplicate value
 
-        // Finding the duplicate number
+     
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 if (arr[i] == arr[j]) {
@@ -28,7 +28,7 @@ public class DuplicateNum {
             }
         }
         
-        // Printing the duplicate number
+      
         if (duplicate != -1) {
             System.out.println("Duplicate number is: " + duplicate);
         } else {
