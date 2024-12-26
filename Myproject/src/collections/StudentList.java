@@ -1,18 +1,14 @@
 package collections;
-
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-
 
 public class StudentList {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-        // Create a list of students
+       
         List<String> studentNames = new ArrayList<>();
 
         // Adding students to the list
