@@ -49,7 +49,6 @@ public class MultiThreadDemo {
 		        ProcessingThread processingThread = new ProcessingThread(inputThread.input);
 		        processingThread.start();
 	
-
 	}
 
 }
