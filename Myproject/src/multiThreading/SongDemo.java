@@ -1,7 +1,7 @@
 package multiThreading;
 import java.util.Scanner;
 
-// Thread class for Bohemian Rhapsody
+
 class BohemianRhapsody extends Thread {
     private String songName;
 
@@ -20,7 +20,7 @@ class BohemianRhapsody extends Thread {
     }
 }
 
-// Thread class for Imagine
+
 class Imagine extends Thread {
     private String songName;
 
@@ -39,7 +39,6 @@ class Imagine extends Thread {
     }
 }
 
-// Thread class for Shape of You
 class ShapeOfYou extends Thread {
     private String songName;
 
